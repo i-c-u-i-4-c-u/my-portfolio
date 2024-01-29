@@ -46,10 +46,10 @@ a {
     display: block;
   }
   
-
+/* Header Section */
 
   header {
-    /* background: rgb(121, 121, 225); */
+    background: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,7 +58,7 @@ a {
     position:fixed;
     top:0;
     left:0;
-    border: #fff solid 1px;
+    /* border: #fff solid 1px; */
   }
 
   div.logo {
@@ -97,7 +97,9 @@ a {
     transition: .5s;
   }
 
-  .about {
+  /* About Section */
+
+  .about-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +108,6 @@ a {
   }
 
   .info{
-    width: 60%;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -137,9 +138,6 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* width: 40%; */
-    /* border:#fff solid 1px; */
-    /* height: 60%; */
     padding: 20px;
     border-radius: 50%;
     align-content: center;
@@ -163,6 +161,44 @@ button {
 
 button:hover {
     border-color: rgb(232, 111, 131);
+}
+
+/* Experience */
+
+.exp-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.exp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.exp-container-bx {
+  display: flex;
+  justify-content: space-around;
+  gap: 70px;
+  margin-top: 50px;
+}
+.exp-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  border: #fff solid 2px;
+  border-radius: 20px;
+  padding: 20px
+}
+
+.bxs-award {
+  font-size: 4em;
+  color: rgb(232, 111, 131);
 }
 
   @media screen and (max-width: 1146px) {
