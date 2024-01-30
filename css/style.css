@@ -234,13 +234,12 @@ button:hover {
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 16px 0 rgb(232, 111, 131);
+  border-color: rgb(232, 111, 131);
 }
 
 .project-img {
   width: 250px;
-  height: 250px;
-  /* border: #fff solid 2px; */
+  height: 200px;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -255,6 +254,8 @@ object-fit: cover;
   font-size: 1.5em;
   font-weight: 600;
   margin: 10px 0;
+  max-width: 200px;
+  text-wrap:nowrap;
 }
 
 .project-btn{
@@ -339,7 +340,7 @@ text-transform: uppercase;
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
   justify-content:center ;
   align-items: center;
   margin-top: 60px;
