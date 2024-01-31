@@ -82,6 +82,9 @@ a {
     align-items: center;
     font-weight: 600;
   }
+  li {
+    z-index: 20;
+  }
 
   ul.menu a {
     color: rgb(232, 111, 131);
@@ -255,7 +258,6 @@ object-fit: cover;
   font-size: 1.5em;
   font-weight: 600;
   margin: 10px 0;
-  /* max-width: 200px; */
   text-wrap:nowrap;
 }
 
@@ -471,7 +473,7 @@ text-transform: uppercase;
       padding: 20px;
     }
     .exp-card {
-      width: 300px;
+      /* width: 300px; */
     }
 
     /* Project Section */
