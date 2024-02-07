@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-  /* html {
-    color-scheme: light dark;
-  } */
+  html {
+    color-scheme: dark light;
+  }
 
   body {
     font-size:1em;
     line-height: 1.6;
-    background: black; 
-    color: #fff;
-    font-size: 1em;
+    /* background: black;  */
+    /* color: #fff; */
+    font-size: 1.125rem;
 }
 
 *{
@@ -34,28 +34,27 @@ a {
     list-style: none;
   }
   
-  img,
-  picture,
-  svg,
-  video,
-  iframe,
-  canvas {
+  img {
     max-width: 100%;
     display: block;
   }
   
 /* Header Section */
 
-  header {
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 70px;
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
+header {
+  width: 100%;
+  height : 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  position:fixed;
+  top:0;
+  left:0;
+}
+
+  .header-content {
+    width:70%;
   }
 
   div.logo {
@@ -100,35 +99,33 @@ a {
 
   .about-section {
     display: flex;
-    align-items: center;
     justify-content: center;
     width: 100%;
     min-height: 80vh;
-    margin-top: 100px;
+    padding : 100px 0;
+    border: #000 solid 1px;
 
   }
 
   .info{
     display: flex;
-    justify-content:center;
+    justify-content:space-evenly;
     align-items: center;
     gap: 50px;
     padding: 30px;
-    max-width: 70%;
+    width: 70%;
+    border: #000 solid 1px;
   }
 
-
   .img-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;
+    border: #000 solid 1px;
   }
 
   .img-card img {
-    width: 350px;
-    height: 350px;
     object-fit: cover;
   }
  
@@ -140,7 +137,7 @@ a {
     padding: 20px;
     border-radius: 50%;
     align-content: center;
-
+    border: #000 solid 1px;
   }
 
   .name-card .name {
@@ -368,7 +365,7 @@ text-transform: uppercase;
   text-align: center;
   margin: 10px;
 }
-  @media screen and (max-width: 1230px) {
+  @media screen and (max-width: 1024px) {
     header {
       padding : 20px 40px;
     }
@@ -418,7 +415,7 @@ text-transform: uppercase;
     }
   }
 
-  @media screen and (max-width: 979px) {
+  @media screen and (max-width: 768px) {
 
     div.menu-icon {
       display:block ;
@@ -496,7 +493,7 @@ text-transform: uppercase;
     }
   }
 
-  @media screen and (max-width: 757px) {
+  @media screen and (max-width: 425px) {
 
     /* About Section */
 
