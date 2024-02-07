@@ -7,8 +7,8 @@
   body {
     font-size:1em;
     line-height: 1.6;
-    /* background: black;  */
-    /* color: #fff; */
+    background: black;  
+    color: #fff;
     font-size: 1.125rem;
 }
 
@@ -30,7 +30,7 @@ a {
     box-sizing: border-box;
   }
   
-  ol, ul {
+  ul {
     list-style: none;
   }
   
@@ -45,9 +45,10 @@ header {
   width: 100%;
   height : 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background: #000;
+  color:#fff;
   position:fixed;
   top:0;
   left:0;
@@ -55,32 +56,29 @@ header {
 
   .header-content {
     width:70%;
+    display: flex;
+    justify-content: space-between;
+
   }
 
   div.logo {
     font-size: 2rem;
     font-weight: 600;
     pointer-events: none;
-    color:#fff;
     text-wrap: nowrap;
   }
 
 
   div.menu-icon {
     display: none;
-    color:#fff;
     font-size: 2em;
   }
 
 
   ul.menu {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     font-weight: 600;
-  }
-  li {
-    z-index: 20;
   }
 
   ul.menu a {
@@ -103,8 +101,6 @@ header {
     width: 100%;
     min-height: 80vh;
     padding : 100px 0;
-    border: #000 solid 1px;
-
   }
 
   .info{
@@ -114,7 +110,6 @@ header {
     gap: 50px;
     padding: 30px;
     width: 70%;
-    border: #000 solid 1px;
   }
 
   .img-card {
@@ -122,12 +117,11 @@ header {
     height: 350px;
     border-radius: 50%;
     overflow: hidden;
-    border: #000 solid 1px;
   }
 
-  .img-card img {
+  /* .img-card img {
     object-fit: cover;
-  }
+  } */
  
   .name-card {
     display: flex;
@@ -168,9 +162,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 80vh;
-  margin-top: 100px;
-
+  padding : 100px 0;
 }
 
 .exp-container {
@@ -178,52 +170,49 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 70%;
-
+  width: 70%;
 }
-.exp-container-bx {
+
+.exp-container-bx  {
   display: flex;
   align-items: center;
-  justify-content:center;
-  gap: 70px;
-  margin-top: 50px;
+  justify-content:space-around;
+  padding-top: 50px;
+  width : 100%;
 }
+
 .exp-card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 400px;
+  width: 40%;
   border: #fff solid 2px;
   border-radius: 20px;
-  padding: 20px
+  padding: 20px;
 }
 
 .bxs-award {
-  font-size: 4em;
-  color: rgb(232, 111, 131);
+  font-size: 4rem;
 }
 
 /* Project Section */
 
 .project {
   width: 100%;
-  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
-
+  padding: 100px 0;
 }
+
 .project-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: space-evenly;
-  gap :30px;
-  margin-top: 20px;
-  max-width: 70%;
-
+  justify-content: space-around;
+  padding-top: 50px;
+  width: 70%;
 }
 
 .project-card {
@@ -232,26 +221,38 @@ button:hover {
   padding: 20px;
 }
 
+.project-card > * {
+  width: 250px;
+}
 .project-card:hover {
   border-color: rgb(232, 111, 131);
 }
 
+.project-card:hover > * {
+  width: 270px;
+}
+
+.project-card:hover > .project-img {
+  border-color: rgb(232, 111, 131);
+  }
+  
+
 .project-img {
-  width: 250px;
-  height: 200px;
+  height: 250px;
   border-radius: 20px;
   overflow: hidden;
+  border: #fff solid 2px;
+
 }
 
 .project-img img {
-width:100%;
-height:100%;
-object-fit: cover;
+object-fit:cover;
+
 }
 
 .project-title {
-  font-size: 1.5em;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 500;
   margin: 10px 0;
   text-wrap:nowrap;
 }
@@ -259,6 +260,7 @@ object-fit: cover;
 .project-btn{
   display: flex;
   justify-content: space-between;
+
 }
 .project-btn button {
   padding: 10px 20px;
@@ -284,31 +286,31 @@ object-fit: cover;
   align-items: center;
   flex-direction: column;
   width:100%;
-  min-height: 80vh;
-  margin-top: 100px;
+  padding: 100px 0;
 
 }
 
+.skill-section > * {
+  width:70%;
+}
 .skill-container {
   display:grid;
   grid-template-columns: auto auto;
   gap: 20px;
-  margin-top: 50px;
-  max-width: 70%;
-
+  padding-top: 50px;
 }
 
 .skill-card {
   display: grid;
-  grid-template-columns: 150px 300px;
-  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
   align-items: center;
   border: #fff solid 2px;
   border-radius: 20px;
   padding: 20px;
 }
 .skill-card p {
-font-size: 1.2em;
+font-size: 1.2rem;
 font-weight: 600;
 text-transform: uppercase;
 }
