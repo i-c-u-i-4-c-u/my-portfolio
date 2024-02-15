@@ -5,7 +5,7 @@
   }
 
   body {
-    font-size:1em;
+    font-size:1rem;
     line-height: 1.6;
     background: black;  
     color: #fff;
@@ -27,10 +27,6 @@ a {
     text-decoration:none;
     cursor: pointer;
 }
-
-  {
-    
-  }
   
   ul {
     list-style: none;
@@ -46,12 +42,18 @@ a {
   .exp-container,
   .project-container,
   .skill-container {
-    width: 1024px;
+    width: min(80%, 1300px);
+  }
+
+  ion-icon {
+    color: rgb(232, 111, 131);
+    font-weight: 600;
+      font-size: 2rem;
+      font-weight: 600;
   }
   
 /* Header Section */
 
-/*Navbar Section*/
 .navbar{
   background:#131313;
   height:80px;
@@ -231,9 +233,7 @@ a {
 }
 }
 
-  .bx {
-    color: rgb(232, 111, 131);
-  }
+
 
   /* About Section */
 
@@ -251,7 +251,6 @@ a {
     align-items: center;
     gap: 50px;
     padding: 30px;
-    /* width: 70%; */
   }
 
   .img-card {
@@ -260,10 +259,6 @@ a {
     border-radius: 50%;
     overflow: hidden;
   }
-
-  /* .img-card img {
-    object-fit: cover;
-  } */
  
   .name-card {
     display: flex;
@@ -271,9 +266,6 @@ a {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    border-radius: 50%;
-    align-content: center;
-    border: #000 solid 1px;
   }
 
   .name-card .name {
@@ -297,6 +289,54 @@ button:hover {
     color: rgb(232, 111, 131)
 }
 
+.logo {
+  margin-top :10px;
+}
+
+@media screen and (max-width:927px) {
+
+  .info{
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (max-width:430px) {
+
+  .img-card {
+    width: 250px;
+    height: 250px;
+  }
+ 
+  .name-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:0;
+  }
+
+  .name-card .name {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .hire-me a {
+    display: block;
+    margin: 10px auto;
+  }
+  .hire-me a button {
+  margin-inline: auto;
+  display: block;
+}
+
+button:hover {
+    border-color: rgb(232, 111, 131);
+    color: rgb(232, 111, 131)
+}
+}
+
 /* Experience */
 
 .exp-section {
@@ -312,15 +352,19 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: 70%; */
+  max-width : 900px;
+
 }
 
 .exp-container-bx  {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: ;
   align-items: center;
   justify-content:space-around;
   padding-top: 50px;
-  width : 100%;
+  gap :50px;
+  /* border: #fff solid 2px; */
 }
 
 .exp-card {
@@ -328,7 +372,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 40%;
+  min-height: 100%;
   border: #fff solid 2px;
   border-radius: 20px;
   padding: 20px;
@@ -504,7 +548,7 @@ text-transform: uppercase;
   text-align: center;
   margin: 50px 0 20px; 
 }
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     .header-content,
     .info,
     .exp-container,
@@ -572,4 +616,4 @@ text-transform: uppercase;
     /* About Section */
 
     
-}
+} */
