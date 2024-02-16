@@ -380,11 +380,18 @@ button:hover {
   padding: 20px;
 }
 
+  .exp-card ion-icon {
+    font-size: 5rem;
+  }
 @media screen and (max-width:818px) {
 
 .exp-container {
   max-width: 500px;
 
+}
+
+.exp-card ion-icon {
+  font-size: 2rem;
 }
 }
 
@@ -590,10 +597,46 @@ grid-column: auto;
 
 }
 
+.contact-info p {
+  display: flex;
+align-items: center;
+}
+
+@media screen and (max-width:590px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+}
+
+@media screen and (max-width:355px) {
+  .contact-info {
+  font-size: 1rem;
+  padding: 20px 5px;
+
+    
+  }
+
+}
+
+@media screen and (max-width: 291px) {
+  .contact-info {
+  font-size: .8rem;
+ 
+  }
+
+}
+
+
+
 /* Footer */
 .footer {
   font-size: small;
   text-align: center;
-  margin: 50px 0 20px; 
+  margin-top: 50px; 
+  padding: 20px;
+
 }
   
