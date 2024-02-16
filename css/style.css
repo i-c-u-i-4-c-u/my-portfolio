@@ -142,15 +142,15 @@ a {
   border:none;
   outline:none;
   border-radius:4px;
-  background:#833ab4;
-  background:-webkit-linear-gradient(to right, #fcb845, #fd1d1d, #833ab4);
-  background:linear-gradient(to right, #fcb845, #fd1d1d, #833ab4);
+  background:rgb(232, 111, 131);
+  background:-webkit-linear-gradient(to right, #fcb845, #fd1d1d, rgb(232, 111, 131));
+  background:linear-gradient(to right, #fcb845, #fd1d1d, rgb(232, 111, 131));
   color:#fff;
   transition:all 0.3s ease;
 }
 
 .navbar_links:hover{
-  color:#9518fc;
+  color:rgb(232, 111, 131);
   transition:all 0.3s ease;
 }
 
@@ -447,6 +447,7 @@ button:hover {
 
 .project-img img {
 object-fit:cover;
+height: 100%;
 
 }
 
@@ -460,6 +461,7 @@ object-fit:cover;
 .project-btn{
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 
 }
 .project-btn button {
@@ -468,7 +470,7 @@ object-fit:cover;
   background-color: black;
   outline: none;
   border: #fff solid 2px;
-  font-size: .8em;
+  font-size: 1rem;
   border-radius: 20px;
   font-weight:bold;
 }
@@ -483,8 +485,14 @@ object-fit:cover;
 
 
 .project-container {
-    max-width:500px;
+    max-width:400px;
   }
+
+.project-btn button {
+  padding: 15px 10px;
+  font-size: 1rem;
+
+}
 
 }
 
