@@ -45,6 +45,16 @@ a {
     width: min(80%, 1300px);
   }
 
+@media screen and (max-width:600px) {
+  .header-content,
+  .info,
+  .exp-container,
+  .project-container,
+  .skill-container {
+    width: 90%;
+  }
+}
+
   ion-icon {
     color: rgb(232, 111, 131);
     font-weight: 600;
@@ -298,6 +308,8 @@ button:hover {
   .info{
     display: flex;
     flex-direction: column;
+    padding: 0;
+
   }
 
 }
@@ -310,10 +322,6 @@ button:hover {
   }
  
   .name-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     padding:0;
   }
 
@@ -329,11 +337,6 @@ button:hover {
   .hire-me a button {
   margin-inline: auto;
   display: block;
-}
-
-button:hover {
-    border-color: rgb(232, 111, 131);
-    color: rgb(232, 111, 131)
 }
 }
 
@@ -358,13 +361,12 @@ button:hover {
 
 .exp-container-bx  {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-template-rows: ;
   align-items: center;
-  justify-content:space-around;
   padding-top: 50px;
-  gap :50px;
-  /* border: #fff solid 2px; */
+  justify-content:space-around;
+  gap :30px;
 }
 
 .exp-card {
@@ -378,10 +380,21 @@ button:hover {
   padding: 20px;
 }
 
-.bxs-award {
-  font-size: 4rem;
+@media screen and (max-width:818px) {
+
+.exp-container {
+  max-width: 500px;
+
+}
 }
 
+
+@media screen and (max-width:600px) {
+  .exp-card {
+    padding:15px;
+    }
+
+}
 /* Project Section */
 
 .project {
@@ -395,10 +408,10 @@ button:hover {
 
 .project-container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 30px;
   padding-top: 50px;
-  /* width: 70%; */
 }
 
 .project-card {
@@ -407,16 +420,10 @@ button:hover {
   padding: 20px;
 }
 
-.project-card > * {
-  width: 250px;
-}
 .project-card:hover {
   border-color: rgb(232, 111, 131);
 }
 
-.project-card:hover > * {
-  width: 270px;
-}
 
 .project-card:hover > .project-img {
   border-color: rgb(232, 111, 131);
@@ -424,7 +431,7 @@ button:hover {
   
 
 .project-img {
-  height: 250px;
+  height: 200px;
   border-radius: 20px;
   overflow: hidden;
   border: #fff solid 2px;
@@ -464,6 +471,26 @@ object-fit:cover;
   color: rgb(232, 111, 131);
 }
 
+
+@media screen and (max-width:757px) {
+
+
+.project-container {
+    max-width:500px;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+
+.project-container {
+  padding:0;
+}
+.project-card {
+  padding: 10px;
+}
+}
+
 /* Skills Section */
 
 .skill-section {
@@ -472,16 +499,16 @@ object-fit:cover;
   align-items: center;
   flex-direction: column;
   width:100%;
+
   padding: 100px 0;
 
 }
 
 .skill-container {
   display:grid;
-  grid-template-columns: 40% 40%;
-  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
   padding-top: 50px;
-  /* width:70%; */
 
 }
 
@@ -518,6 +545,27 @@ text-transform: uppercase;
   text-align: center;
 }
 
+@media screen and (max-width:906px) {
+
+  .skill-container {
+
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width:500px) {
+
+.skill-card {
+grid-template-columns: auto;
+padding: 10px;
+} 
+
+.skill-card-heading {
+grid-column: auto;
+} 
+
+
+}
 /* Contact Section */
 
 .contact-section {
@@ -548,72 +596,4 @@ text-transform: uppercase;
   text-align: center;
   margin: 50px 0 20px; 
 }
-  /* @media screen and (max-width: 1024px) {
-    .header-content,
-    .info,
-    .exp-container,
-    .project-container,
-    .skill-container {
-      width: 90%;
-    }
-
-    .info {
-      gap : 10px;
-      padding: 10px;
-    }
-
-    .img-card {
-      width: :300px;
-      height: 300px;
-    }
-
-    ul.menu a {
-      padding: 7px;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-
-    div.menu-icon {
-      display:block ;
-    }
-
-    ul.menu {
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      display: block;
-      position:absolute ;
-      right: -100%;
-      top:100%;
-      width:100%;
-    }
-
-    ul.menu a {
-      padding: 10px;
-      display:block;
-      text-align: center;
-      width: 100%;
-    }
-
-
-    ul.menu li{
-      width:100%;
-      display: block;
-     margin: auto;
-    }
-
-    .menu.open {
-        right: 0;
-    }
-
-
-    
-  }
-
-  @media screen and (max-width: 425px) {
-
-    /* About Section */
-
-    
-} */
+  
