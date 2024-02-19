@@ -489,7 +489,6 @@ height: 100%;
   }
 
 .project-btn button {
-  padding: 15px 10px;
   font-size: 1rem;
 
 }
@@ -503,6 +502,16 @@ height: 100%;
 }
 .project-card {
   padding: 10px;
+}
+
+.project-btn {
+  width:100%;
+  flex-direction: column;
+}
+
+.project-btn button {
+  display:block;
+  width: 100%;
 }
 }
 
