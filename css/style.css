@@ -2,6 +2,7 @@
 
   html {
     color-scheme: dark light;
+    scroll-behavior: smooth;
   }
 
   body {
