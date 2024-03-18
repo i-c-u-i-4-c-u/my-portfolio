@@ -313,6 +313,7 @@ background: -webkit-linear-gradient(45deg, #fcb845, #fd1d1d, rgb(232, 111, 131))
     border: #fff solid 2px;
     border-radius: 20px 0;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 button:hover {
@@ -355,6 +356,11 @@ button:hover {
     flex-direction: column;
   }
 
+  .hire-me button {
+    
+    font-size: 1.2rem;
+}
+
 }
 
 @media screen and (max-width:551px) {
@@ -390,6 +396,11 @@ button:hover {
     font-size: 2rem;
 
   }
+
+  .hire-me button {
+    
+    font-size: 1rem;
+}
 }
 
 /* Experience */
