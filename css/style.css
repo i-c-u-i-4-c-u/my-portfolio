@@ -314,13 +314,36 @@ background: -webkit-linear-gradient(45deg, #fcb845, #fd1d1d, rgb(232, 111, 131))
     border-radius: 20px 0;
     font-weight: 600;
     font-size: 1.2rem;
+  
+}
+
+.hire-me-effect {
+  animation-name: btn-effect;
+  animation-duration:  4s ;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes btn-effect {
+  from {
+    text-shadow: 0 0 1px #fff,
+    0 0 3px rgb(232, 111, 131),
+    0 0 7px rgb(232, 111, 131),
+    0 0 10px rgb(232, 111, 131),
+    0 0 22px rgb(232, 111, 131);
+  }
 }
 
 button:hover {
-    border-color: rgb(232, 111, 131);
-    color: #fff;
-  background-image:linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-  transition: all .5s ease;
+    box-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 12px #fff,
+    0 0 18px rgb(232, 111, 131),
+    0 0 22px rgb(232, 111, 131),
+    0 0 32px rgb(232, 111, 131),
+    0 0 42px rgb(232, 111, 131);
+     ;
 
 }
 
