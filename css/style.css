@@ -19,6 +19,7 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     transition: all .5s ease;
+    /* border: #e2e3e7 solid 1px; */
 }
 
 a {
@@ -40,7 +41,6 @@ a {
   #skills,
   #contact { 
     width: min(90%, 1300px);
-    /* padding-inline: 50px; */
     margin-inline: auto;
     display: flex;
     flex-direction: column;
@@ -247,13 +247,6 @@ ion-icon {
 
   /* About Section */
 
-  .about-section {
-    display: flex;
-    justify-content: center;
-    /* width: 100%; */
-    min-height: 80vh;
-    padding : 90px 0;
-  }
 
   .info{
     display: flex;
@@ -291,7 +284,7 @@ ion-icon {
 
   }
   .name-card .name {
-background: -webkit-linear-gradient(45deg, #fcb845, #fd1d1d, rgb(232, 111, 131)); 
+background: -webkit-linear-gradient(45deg, #fcb845 25%, #fd1d1d, rgb(232, 111, 131)); 
 -webkit-background-clip:text;
 -webkit-text-fill-color: transparent;
 
@@ -307,26 +300,34 @@ background: -webkit-linear-gradient(45deg, #fcb845, #fd1d1d, rgb(232, 111, 131))
 
 .hire-me button {
     padding: 10px 20px;
-    color: #fff;
-    background-color: transparent;
+    color: #131111;
+    background-color: #b8b0b0;
     outline: none;
-    border: #fff solid 2px;
+    border: none;
     border-radius: 20px 0;
     font-weight: 600;
     font-size: 1.2rem;
-  
+    position: relative;
+    z-index: 10;
 }
+
+
 
 .hire-me-effect {
   animation-name: btn-effect;
-  animation-duration:  4s ;
-  animation-iteration-count: infinite;
+  animation-duration:  2s ;
+  animation-iteration-count: 10;
   animation-direction: alternate;
 
 }
 
 @keyframes btn-effect {
   from {
+    text-shadow:none;
+  }
+
+  to {
+    background-color: #000;
     text-shadow: 0 0 1px #fff,
     0 0 3px rgb(232, 111, 131),
     0 0 7px rgb(232, 111, 131),
@@ -335,19 +336,50 @@ background: -webkit-linear-gradient(45deg, #fcb845, #fd1d1d, rgb(232, 111, 131))
   }
 }
 
-button:hover {
-    box-shadow: 0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 12px #fff,
-    0 0 18px rgb(232, 111, 131),
-    0 0 22px rgb(232, 111, 131),
-    0 0 32px rgb(232, 111, 131),
-    0 0 42px rgb(232, 111, 131);
-     ;
+
+.btn-border {
+  position: relative;
+  background: #000);
+  padding: 5px;
+    border-radius: 20px 0;
+  animation: border-glow 2s linear infinite; 
+}
+
+.btn-border::before,
+.btn-border::after  {
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.btn-border:hover.btn-border::before {
+  filter: blur(3px);
+}
+
+.btn-border:hover.btn-border::after {
+  filter: blur(7px);
+}
+
+.btn-border:hover {
+  background: linear-gradient( #fcb845, #fd1d1d, rgb(232, 111, 131));
 
 }
 
 
+@keyframes border-glow {
+from {
+  filter: hue-rotate(0deg);
+}
+to {
+  filter: hue-rotate(360deg);
+}
+}
 
 @media screen and (max-width:1150px) {
   .img-card {
@@ -394,9 +426,6 @@ button:hover {
     height: auto;
   }
 
-  .info {
-    padding: 10px;
-  }
 
   .name-card .name {
     font-size: 2.5rem;
@@ -425,6 +454,10 @@ button:hover {
     font-size: 1rem;
 }
 }
+
+
+
+
 
 /* Experience */
 
@@ -513,21 +546,19 @@ height: 100%;
 
 }
 
-.project-btn{
-  display: flex;
+.project-card .hire-me{
   justify-content: space-between;
-  gap: 10px;
+  /* gap: 10px; */
 
 }
-.project-btn button {
-  padding: 10px 20px;
-  color: #fff;
-  background-color: transparent;
-  outline: none;
-  border: #fff solid 2px;
-  font-size: 1rem;
+.project-card .hire-me button {
+
+  font-size: 1rem; 
   border-radius: 20px;
-  font-weight:bold;
+}
+
+.project-card .btn-border{
+  border-radius: 20px;
 }
 
 
@@ -558,16 +589,7 @@ height: 100%;
 
 /* Skills Section */
 
-/* .skill-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width:100%;
 
-  padding: 100px 0;
-
-} */
 
 .skill-container {
   display:grid;
@@ -661,14 +683,6 @@ align-items: center;
 color: #fff;
 
 }
-/* @media screen and (max-width:590px) {
-  .contact-info {
-    flex-direction: column;
-    align-items: center;
-
-  }
-
-} */
 
 @media screen and (max-width:404px) {
   .contact-info {
@@ -686,6 +700,7 @@ font-size: .7rem;
   }
 
 }
+
 
 
 
